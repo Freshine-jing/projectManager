@@ -1,5 +1,5 @@
 <script>
-import Head from "./Head"
+import Head from "./Head.vue";
 
 export default {
   name: "Home",
@@ -18,16 +18,16 @@ export default {
         <el-menu-item index="/dataset">数据管理</el-menu-item>
         <el-menu-item index="/module">模块管理</el-menu-item>
       </el-menu>
-      <div class="content">
-        <router-view></router-view>
-      </div>
+    </div>
+    <div class="content">
+      <router-view></router-view>
     </div>
   </div>
 </template>
 
 <style>
 body {
-    background-color: rgb(245, 249, 253);
+  background-color: rgb(245, 249, 253);
 }
 .el-menu--horizontal > .el-menu-item {
   height: 36px;
