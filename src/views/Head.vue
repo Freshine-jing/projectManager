@@ -23,7 +23,7 @@ html {
 }
 </style>
 
-<style lang="less">
+<style>
 .homepage-header {
   height: 64px;
   background: rgba(85, 97, 255, 1);
