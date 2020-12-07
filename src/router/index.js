@@ -30,34 +30,52 @@ const routes = [
     component: Project,
     children: [
       
-    ]
+    ],
+    meta: {
+      title: 'Projectpage'
+    }
   },
   {
     path: '/project_authorization',
     name: 'ProjectAuthorization',
     component: ProjectAuthorization,
+    meta: {
+      title: 'ProjectAuthorization'
+    }
   },
   {
     path: '/project_information',
     name: 'ProjectInformation',
     component: ProjectInformation,
+    meta: {
+      title: 'ProjectInformation'
+    }
   },
   {
     path: '/project_export',
     name: 'ProjectExport',
     component: ProjectExport,
+    meta: {
+      title: 'ProjectExport'
+    }
   },
 
   {
     path: '/dataset',
     name: 'Dataset',
     component: Dataset,
+    meta: {
+      title: 'Dataset'
+    }
   },
 
   {
     path: '/module',
     name: 'Module',
     component: Module,
+    meta: {
+      title: 'Module'
+    }
   },
   
 ]
@@ -66,6 +84,11 @@ const router = new VueRouter({
   routes,
   mode: 'history',
   // linkActiveClass: 'active'
+})
+
+router.beforeEach((to, from, next) => {
+  document.title = to.matched[0].meta.title
+  next()
 })
 
 export default router
